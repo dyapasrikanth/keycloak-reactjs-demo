@@ -35,7 +35,8 @@ const updateToken = (successCallback) => {
     .catch(doLogin)
 };
 
-const getUsername = () => _kc.tokenParsed.preferred_username;
+const getUsername = () => _kc.tokenParsed.name;
+const getRoomName = () => _kc.tokenParsed.room;
 
 export default {
   initKeycloak,
@@ -44,4 +45,5 @@ export default {
   getToken,
   updateToken,
   getUsername,
+  getRoomName
 }

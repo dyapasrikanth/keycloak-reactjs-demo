@@ -1,7 +1,8 @@
 {
-  "realm": "demo",
-  "auth-server-url": "http://localhost:8080/auth",
+  "realm": "evacloud",
+  "auth-server-url": "https://evacloud.io/auth",
   "ssl-required": "external",
-  "resource": "bookBox",
-  "public-client": true
+  "resource": "evacloud-meet",
+  "public-client": true,
+  "pkce": true
 }

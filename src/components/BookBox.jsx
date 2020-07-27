@@ -4,6 +4,7 @@ import BookForm from "./BookForm";
 import BookList from "./BookList";
 import {addBook, allBooks, deleteBook} from "../modules/books";
 import UserService from "../services/UserService";
+import Meeting from "./Meeting";
 
 export default function BookBox() {
 
@@ -20,10 +21,8 @@ export default function BookBox() {
         Welcome {UserService.getUsername()}&nbsp;
         <button className="btn btn-success" onClick={UserService.doLogout}>Logout</button>
       </h1>
-      <h1>Best Books ever!</h1>
-      <hr/>
-      <BookList books={books} onBookDelete={(book) => dispatch(deleteBook(book))}/>
-      <BookForm onBookSubmit={(book) => dispatch(addBook(book))}/>
+      
+      <a href={"http://meet.evacloud.io/" + UserService.getRoomName() + '?jwt=' + UserService.getToken()}>Start meeting</a>
     </div>
   );
 }
